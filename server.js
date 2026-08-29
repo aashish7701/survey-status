@@ -3,7 +3,7 @@ const path = require("path");
 const Database = require("better-sqlite3");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const db = new Database(path.join(__dirname, "survey.db"));
 
@@ -141,7 +141,6 @@ app.get("/api/results.csv", (req, res) => {
   res.send(csv);
 });
 
-app.listen(PORT, () => {
-  console.log(`Survey Status app running at http://localhost:${PORT}`);
-  console.log(`Results dashboard: http://localhost:${PORT}/results.html`);
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on port ${PORT}`);
 });
