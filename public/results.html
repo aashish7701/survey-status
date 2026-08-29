@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Results</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="results.css">
+</head>
+<body>
+  <header>
+    <div>
+      <div class="brand"><span>Data</span><strong>Leaf</strong></div>
+      <div class="subtitle">Local Survey Results</div>
+    </div>
+    <a href="/" class="back">Status Page</a>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <div>
+        <h1>Survey Results</h1>
+        <p>All results are stored locally in <code>survey.db</code>.</p>
+      </div>
+      <a class="export" href="/api/results.csv">Export CSV</a>
+    </div>
+
+    <div class="search-row">
+      <input id="search" type="search" placeholder="Search PID, UID or status...">
+      <button id="searchButton">Search</button>
+      <button id="clearButton" class="secondary">Clear</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Status</th>
+            <th>Project ID</th>
+            <th>Respondent ID</th>
+            <th>Date</th>
+            <th>Time (IST)</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody">
+          <tr><td colspan="6" class="loading">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="count" class="count"></div>
+  </main>
+
+  <script src="results.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Status</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true"><span>◒</span></div>
+      <div class="brand-name"><span>Data</span><strong>Leaf</strong></div>
+    </div>
+    <div id="headerStatus" class="header-status">STATUS</div>
+  </header>
+
+  <main class="page">
+    <section class="content">
+      <div class="message-area">
+        <div id="statusIcon" class="status-icon">✓</div>
+        <div id="statusLabel" class="status-label">COMPLETE</div>
+        <h1 id="headline">Thank you for participating</h1>
+        <p id="message">Your responses have been recorded successfully. This complete status will be reported to the survey panel if you were invited through one.</p>
+        <p id="secondaryMessage">You may now close this window. No further action is required.</p>
+      </div>
+
+      <aside class="details-card">
+        <div class="card-accent"></div>
+        <h2>SESSION DETAILS</h2>
+        <div class="detail-row"><span>Status</span><strong id="detailStatus">Complete</strong></div>
+        <div class="detail-row"><span>Project ID</span><strong id="projectId">N/A</strong></div>
+        <div class="detail-row"><span>Respondent ID</span><strong id="respondentId">N/A</strong></div>
+        <div class="detail-row"><span>Date</span><strong id="date">--/--/----</strong></div>
+        <div class="detail-row"><span>Time (IST)</span><strong id="time">--:--:--</strong></div>
+        <div class="detail-row"><span>Record ID</span><strong id="recordId">--</strong></div>
+        <button id="copyButton" class="copy-button" type="button">▣ &nbsp; Copy details</button>
+        <div id="copyMessage" class="copy-message"></div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> DataLeaf. All rights reserved.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
